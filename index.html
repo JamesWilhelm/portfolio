@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Dev Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script>
+        function showSlide(containerId, direction) {
+            const container = document.getElementById(containerId);
+            const slides = container.querySelectorAll(".slide");
+            let index = Array.from(slides).findIndex(slide => !slide.classList.contains("hidden"));
+            slides[index].classList.add("hidden");
+            index = (index + direction + slides.length) % slides.length;
+            slides[index].classList.remove("hidden");
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">James Wilhelm</h1>
+        <div class="space-x-4">
+            <a href="#home" class="hover:text-blue-500">Home</a>
+            <a href="#projects" class="hover:text-blue-500">Projects</a>
+            <a href="#resume" class="hover:text-blue-500">Resume</a>
+            <a href="https://www.linkedin.com/in/james-wilhelm" target="_blank" class="hover:text-blue-500">LinkedIn</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="text-center py-20 bg-blue-50">
+        <h2 class="text-4xl font-extrabold mb-4">Hi, I'm James Wilhelm 👋</h2>
+        <p class="text-lg mb-6">iOS Developer | SwiftUI Enthusiast | Problem Solver</p>
+        <a href="#projects" class="bg-blue-500 text-white px-6 py-2 rounded-full">See My Work</a>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-16 px-6 bg-gray-100">
+        <h3 class="text-3xl font-bold text-center mb-8">Resume</h3>
+        <div class="flex justify-center">
+            <iframe src="resume.pdf" class="w-full max-w-4xl h-screen border" title="Resume"></iframe>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 bg-white">
+        <h3 class="text-3xl font-bold text-center mb-12">Projects</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Project 1: Asset Scanner Video -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
+                <video controls class="rounded mb-4 mx-auto w-full">
+                    <source src="scanner.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="text-sm">A live-action Asset Scanner that updates in real-time as each asset is scanned.</p>
+            </div>
+
+            <!-- Project 2: Map Images with Clustering -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
+                <div class="relative">
+                    <div id="map-carousel" class="relative">
+                        <img src="map.jpeg" class="slide rounded mb-4 mx-auto" alt="Map View">
+                        <img src="mapSheet.jpeg" class="slide hidden rounded mb-4 mx-auto" alt="Map Sheet View">
+                    </div>
+                    <div class="absolute inset-y-1/2 w-full flex justify-between px-4">
+                        <button onclick="showSlide('map-carousel', -1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&larr;</button>
+                        <button onclick="showSlide('map-carousel', 1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&rarr;</button>
+                    </div>
+                </div>
+                <p class="text-sm">Google Maps integration showcasing clustering to track assets via map view.</p>
+            </div>
+
+            <!-- Project 3: OAuth and Login Flow -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
+                <div class="relative">
+                    <div id="login-carousel" class="relative">
+                        <img src="login.jpeg" class="slide rounded mb-4 mx-auto" alt="Login Screen">
+                        <img src="email.jpeg" class="slide hidden rounded mb-4 mx-auto" alt="Email Login">
+                        <img src="phone.jpeg" class="slide hidden rounded mb-4 mx-auto" alt="Phone Login">
+                    </div>
+                    <div class="absolute inset-y-1/2 w-full flex justify-between px-4">
+                        <button onclick="showSlide('login-carousel', -1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&larr;</button>
+                        <button onclick="showSlide('login-carousel', 1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&rarr;</button>
+                    </div>
+                </div>
+                <p class="text-sm">OAuth flow with seamless email and phone login options, built with Firebase
+                    Authentication.</p>
+            </div>
+
+            <!-- Project 4: OCR Tag Generator -->
+            <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
+                <div class="relative">
+                    <div id="ocr-carousel" class="relative">
+                        <img src="ocr2.jpeg" class="slide rounded mb-4 mx-auto" alt="OCR Tag Generation 2">
+                        <img src="ocr1.jpeg" class="slide hidden rounded mb-4 mx-auto" alt="OCR Tag Generation 1">
+                    </div>
+                    <div class="absolute inset-y-1/2 w-full flex justify-between px-4">
+                        <button onclick="showSlide('ocr-carousel', -1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&larr;</button>
+                        <button onclick="showSlide('ocr-carousel', 1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&rarr;</button>
+                    </div>
+                </div>
+                <p class="text-sm">OCR-based tag generation system that extracts and processes text from images to
+                    auto-generate asset tags.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-sm text-gray-500">
+        © 2025 James Wilhelm. Built with ❤️ and TailwindCSS.
+    </footer>
+</body>
+
+</html>
