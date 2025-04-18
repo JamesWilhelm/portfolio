@@ -51,7 +51,7 @@
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Project 1: Asset Scanner Video -->
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
-                <video controls class="rounded mb-4 mx-auto w-full max-w-full md:max-w-lg">
+                <video controls class="rounded mb-4 mx-auto w-full max-w-full md:max-w-xs h-auto">
                     <source src="scanner.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -62,12 +62,15 @@
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
                 <div class="relative">
                     <div id="map-carousel" class="relative">
-                        <img src="map.jpeg" class="slide mx-auto rounded mb-4 max-w-full md:max-w-md" alt="Map View">
-                        <img src="mapSheet.jpeg" class="slide hidden mx-auto rounded mb-4 max-w-full md:max-w-md" alt="Map Sheet View">
+                        <img src="map.jpeg" class="slide mx-auto rounded mb-4 max-w-full md:max-w-xs" alt="Map View">
+                        <img src="mapSheet.jpeg" class="slide hidden mx-auto rounded mb-4 max-w-full md:max-w-xs"
+                            alt="Map Sheet View">
                     </div>
                     <div class="absolute inset-y-1/2 w-full flex justify-between px-4">
-                        <button onclick="showSlide('map-carousel', -1)" class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&larr;</button>
-                        <button onclick="showSlide('map-carousel', 1)" class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&rarr;</button>
+                        <button onclick="showSlide('map-carousel', -1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&larr;</button>
+                        <button onclick="showSlide('map-carousel', 1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&rarr;</button>
                     </div>
                 </div>
                 <p class="text-sm">Google Maps integration showcasing user clustering to track assets via map view.</p>
@@ -77,31 +80,42 @@
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
                 <div class="relative">
                     <div id="login-carousel" class="relative">
-                        <img src="login.jpeg" class="slide mx-auto rounded mb-4 max-w-full md:max-w-md" alt="Login Screen">
-                        <img src="email.jpeg" class="slide hidden mx-auto rounded mb-4 max-w-full md:max-w-md" alt="Email Login">
-                        <img src="phone.jpeg" class="slide hidden mx-auto rounded mb-4 max-w-full md:max-w-md" alt="Phone Login">
+                        <img src="login.jpeg" class="slide mx-auto rounded mb-4 max-w-full md:max-w-xs"
+                            alt="Login Screen">
+                        <img src="email.jpeg" class="slide hidden mx-auto rounded mb-4 max-w-full md:max-w-xs"
+                            alt="Email Login">
+                        <img src="phone.jpeg" class="slide hidden mx-auto rounded mb-4 max-w-full md:max-w-xs"
+                            alt="Phone Login">
                     </div>
                     <div class="absolute inset-y-1/2 w-full flex justify-between px-4">
-                        <button onclick="showSlide('login-carousel', -1)" class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&larr;</button>
-                        <button onclick="showSlide('login-carousel', 1)" class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&rarr;</button>
+                        <button onclick="showSlide('login-carousel', -1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&larr;</button>
+                        <button onclick="showSlide('login-carousel', 1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&rarr;</button>
                     </div>
                 </div>
-                <p class="text-sm">OAuth flow with seamless email and phone login options, built with Firebase Authentication.</p>
+                <p class="text-sm">OAuth flow with seamless email and phone login options, built with Firebase
+                    Authentication.</p>
             </div>
 
             <!-- Project 4: OCR Tag Generator -->
             <div class="bg-gray-50 p-6 rounded-lg shadow text-center">
                 <div class="relative">
                     <div id="ocr-carousel" class="relative">
-                        <img src="ocr2.jpeg" class="slide mx-auto rounded mb-4 max-w-full md:max-w-md" alt="OCR Tag Generation 2">
-                        <img src="ocr1.jpeg" class="slide hidden mx-auto rounded mb-4 max-w-full md:max-w-md" alt="OCR Tag Generation 1">
+                        <img src="ocr2.jpeg" class="slide mx-auto rounded mb-4 max-w-full md:max-w-xs"
+                            alt="OCR Tag Generation 2">
+                        <img src="ocr1.jpeg" class="slide hidden mx-auto rounded mb-4 max-w-full md:max-w-xs"
+                            alt="OCR Tag Generation 1">
                     </div>
                     <div class="absolute inset-y-1/2 w-full flex justify-between px-4">
-                        <button onclick="showSlide('ocr-carousel', -1)" class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&larr;</button>
-                        <button onclick="showSlide('ocr-carousel', 1)" class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&rarr;</button>
+                        <button onclick="showSlide('ocr-carousel', -1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&larr;</button>
+                        <button onclick="showSlide('ocr-carousel', 1)"
+                            class="bg-white text-blue-600 text-2xl font-bold rounded-full w-10 h-10 flex items-center justify-center shadow hover:bg-blue-100 transition">&rarr;</button>
                     </div>
                 </div>
-                <p class="text-sm">OCR-based tag generation system that extracts and processes text from images to auto-generate asset tags.</p>
+                <p class="text-sm">OCR-based tag generation system that extracts and processes text from images to
+                    auto-generate asset tags.</p>
             </div>
         </div>
     </section>
